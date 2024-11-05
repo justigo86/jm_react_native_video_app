@@ -1,15 +1,21 @@
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import React from "react";
 
-export default function Index() {
+const RootLayout = () => {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+    <View style={styles.container}>
+      <Text>RootLayouting</Text>
     </View>
   );
-}
+};
+
+export default RootLayout;
+
+const styles = StyleSheet.create({
+  container: {
+    display: "flex",
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
