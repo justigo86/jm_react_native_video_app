@@ -12,7 +12,7 @@ export default function RootLayout() {
       </View> */}
       <Text>Footer</Text>
       {/* <Stack>
-        <Stack.Screen name="index" />
+        <Stack.Screen name="index" options={{ headerShown: false }} />
       </Stack> */}
     </>
   );
