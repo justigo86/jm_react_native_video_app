@@ -8,20 +8,11 @@ const RootLayout = () => {
     <View className="flex-1 items-center justify-center bg-white">
       <Text className="text-2xl font-pblack">RootLayouting</Text>
       <StatusBar style="auto" />
-      <Link href="/profile" style={{ color: "blue" }}>
-        Go to Profile
+      <Link href="./home" style={{ color: "blue" }}>
+        Home
       </Link>
     </View>
   );
 };
 
 export default RootLayout;
-
-const styles = StyleSheet.create({
-  container: {
-    display: "flex",
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
