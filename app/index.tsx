@@ -2,6 +2,7 @@ import { Image, ScrollView, Text, View } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { images } from "@/constants";
+import CustomButton from "@/components/CustomButton";
 
 const RootLayout = () => {
   return (
@@ -23,6 +24,7 @@ const RootLayout = () => {
               Discover Endless Possibilities
             </Text>
           </View>
+          <CustomButton />
         </View>
       </ScrollView>
     </SafeAreaView>
