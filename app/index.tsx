@@ -24,7 +24,11 @@ const RootLayout = () => {
               Discover Endless Possibilities
             </Text>
           </View>
-          <CustomButton />
+          <CustomButton
+            handlePress={() => {}}
+            title="Continue with Email"
+            containerStyles="w-full mt-7"
+          />
         </View>
       </ScrollView>
     </SafeAreaView>
