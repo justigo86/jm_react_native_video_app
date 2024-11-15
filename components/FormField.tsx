@@ -1,22 +1,26 @@
 import { View, Text, TextInput } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 
 interface FormFieldProps {
   title: string;
   placeholder: string;
   value: string;
   otherStyles?: string;
-  handleChangeText: (text: string) => void;
+  keyboardType?: string;
+  handleChange?: (text: string) => void;
+  // handleChangeText: (text: string) => void;
 }
 
 const FormField = ({
   title,
   placeholder,
   value,
-  handleChangeText,
+  handleChange,
   otherStyles,
   ...props
 }: FormFieldProps) => {
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
     <View className={`space-y-2 ${otherStyles}`}>
       <Text className="text-gray-100 text-base font-pmedium">{title}</Text>
@@ -26,7 +30,8 @@ const FormField = ({
           placeholder={placeholder}
           placeholderTextColor="#7B7B8B"
           value={value}
-          onChangeText={handleChangeText}
+          onChangeText={handleChange}
+          secureTextEntry={title === "Password" && !showPassword}
         />
       </View>
     </View>
